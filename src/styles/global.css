@@ -56,7 +56,8 @@ h1 {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: #76e1ff;
+  border-radius: 10px;
 }
 
 .expanded {

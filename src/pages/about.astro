@@ -33,16 +33,25 @@ const textCase = "uppercase";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-
   <style is:global define:vars={{ skillColor, fontWeight, textCase }}>
     h1 {
-      color: purple;
+      color: rgb(9, 190, 151);
       font-size: 4rem;
     }
     .skill {
       color: var(--skillColor);
       font-weight: var(--fontWeight);
       text-transform: var(--textCase);
+      margin: 0.25em;
+      border: dotted 1px #a1a1a1;
+      border-radius: 0.5em;
+      padding: 0.5em 1em;
+      font-size: 1.15em;
+      background-color: #f8fcfd;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
     }
   </style>
 
@@ -73,8 +82,8 @@ const textCase = "uppercase";
     }
   </ul>
   <p>My skills are:</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
+  <ul class="skills">
+    {skills.map((skill) => <p class="skill">{skill}</p>)}
   </ul>
   {happy && <p>I am happy to be learning Astro!</p>}
 
